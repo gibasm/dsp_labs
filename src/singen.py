@@ -16,10 +16,10 @@ fs = args.sampling_rate
 
 time = numpy.linspace(0.0, args.nsamples / fs, args.nsamples)
 
-output = numpy.sin(time * numpy.pi * args.freq[0])
+output = numpy.sin(time * 2.0 * numpy.pi * args.freq[0])
 
 for freq in args.freq[1::]:
-    sinwave = numpy.sin(time * numpy.pi * freq)
+    sinwave = numpy.sin(time * 2.0 * numpy.pi * freq)
     output = numpy.add(output, sinwave)
 
 
